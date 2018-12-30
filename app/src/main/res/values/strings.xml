@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bag Cost Calculator</string>
+    <string name="total_cost_display">Total Cost</string>
+</resources>
