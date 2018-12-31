@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Bag Cost Calculator</string>
     <string name="total_cost_display">Total Cost</string>
+    <string name="total_cost">0</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="middle_button_text">Toast</string>
+    <string name="right_button_text">Down</string>
 </resources>
