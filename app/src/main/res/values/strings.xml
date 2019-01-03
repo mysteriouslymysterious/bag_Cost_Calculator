@@ -5,4 +5,6 @@
     <string name="calculate_button">Calculate</string>
     <string name="middle_button_text">Toast</string>
     <string name="right_button_text">Down</string>
+    <string name="result_screen_heading">Here this and that%1</string>
+    <string name="this_that" formatted="false">Here is this one and that 1% that</string>
 </resources>

@@ -1,10 +1,12 @@
 package com.fini.chris.bag_cost_calculator
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun toastMe(view: View){
-        val myToast = Toast.makeText(this, "Hello Donna Toasty", Toast.LENGTH_SHORT)
+        val myToast = Toast.makeText(this, "Hello Toasty", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
@@ -32,4 +34,14 @@ class MainActivity : AppCompatActivity() {
         // Display the new value in the text view.
         showCountTextView.text = count.toString()
     }
+
+    fun randomMe(view: View) {
+        val randomIntent = Intent(this, SecondActivity::class.java)
+        val countString = costNumber.text.toString()
+        val count = Integer.parseInt(countString)
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+        startActivity(randomIntent)
+    }
+
+
 }
