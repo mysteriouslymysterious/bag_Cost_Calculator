@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import java.util.*
 
 class SecondActivity : AppCompatActivity() {
@@ -11,7 +12,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        //showRandomNumber()
+        showRandomNumber()
     }
 
     companion object {
@@ -32,14 +33,17 @@ class SecondActivity : AppCompatActivity() {
         }
 
         // Display the random number.
-        findViewById<TextView>(R.id.textview_result).text = Integer.toString(randomInt)
+        findViewById<TextView>(R.id.textview_random).text = Integer.toString(randomInt)
 
         // Substitute the max value into the string resource
         // for the heading, and update the heading
-        findViewById<TextView>(R.id.textview_label).text = getString(R.string.this_that, count)
+        findViewById<TextView>(R.id.textview_label).text = getString(R.string.random_heading, count)
+
     }
 
     fun quitOut(view: View) {
+        val myToast = Toast.makeText(this, "Bye Bye Toasty :(", Toast.LENGTH_SHORT)
+        myToast.show()
         finish()
     }
 }
